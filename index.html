@@ -6,12 +6,19 @@
     <title>Ryan O'Grady - Math Professor</title>
     <!-- Link to your external CSS file -->
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* Inline CSS for resizing the headshot */
+        img {
+            width: 30%; /* Adjust this percentage as needed */
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>
+            <a href="mailto:your-email@example.com">Ryan O'Grady</a> | <a href="javascript:void(0);" onclick="showConsultingForm()">Tutoring/Consulting</a>
+            <!-- Update the mailto link with your email address -->
             <img src="headshot2.jpg" alt="Ryan O'Grady">
-            Ryan O'Grady - Math Professor
         </h1>
     </header>
     
@@ -59,6 +66,12 @@
         localStorage.setItem('visitorCount', visitorCount);
         // Display the count in the hidden element
         document.getElementById('visitor-counter').textContent = `Total Visitors: ${visitorCount}`;
+
+        // Function to show the consulting form
+        function showConsultingForm() {
+            // Replace with the URL of your form page
+            window.location.href = "consulting_form.html";
+        }
     </script>
 </body>
 </html>
